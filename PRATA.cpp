@@ -5,20 +5,20 @@ bool can(int *a,int n,int p,int mid){
 	int cnt=0;
 	for(int i=0;i<n;i++){
         int c=0;
-		int pp=a[i];
+	int pp=a[i];
         int time=mid;
-		while(time>0){
-			time-=pp;
-            if(time>=0){
-                c+=1;
-                pp+=a[i];
+	while(time>0){
+		time-=pp;
+          if(time>=0){
+              c+=1;
+              pp+=a[i];
             }
-		}
+	}
         cnt+=c;
         if(cnt>=p){
             return true;
+          }
         }
-	}
 	return  false;
 }
 int go(int *a,int n,int p){
